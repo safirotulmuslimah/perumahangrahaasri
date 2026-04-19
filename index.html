@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayleaf Property</title>
+
+<style>
+body{margin:0;font-family:sans-serif;background:#f5f5f5}
+
+/* HEADER */
+.header{
+  background:#d7e500;
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  align-items:center;
+}
+.call{
+  background:#0b5c5c;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:25px;
+}
+
+/* HERO */
+.hero{
+  background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+  color:white;
+  padding:90px 20px;
+}
+.hero h1{margin:0;font-size:38px}
+
+/* PRICE */
+.price{
+  background:white;
+  margin:-50px 20px 20px;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+.big{font-size:38px;color:#0b5c5c;font-weight:bold}
+
+/* FREE */
+.free{
+  background:#0b5c5c;
+  color:white;
+  margin:20px;
+  padding:20px;
+  border-radius:15px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  padding:20px;
+}
+.box{
+  background:#0b5c5c;
+  color:white;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+}
+.yellow{background:#d7e500;color:black}
+
+/* ICON */
+.icon-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  padding:20px;
+}
+.icon{
+  background:#0b5c5c;
+  color:white;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+}
+
+/* HOUSE */
+.house{
+  background:white;
+  margin:20px;
+  border-radius:20px;
+  overflow:hidden;
+}
+.house img{width:100%}
+
+/* FORM */
+.form{
+  background:white;
+  margin:20px;
+  padding:20px;
+  border-radius:20px;
+}
+.form input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+.btn{
+  background:#0b5c5c;
+  color:white;
+  padding:15px;
+  border:none;
+  width:100%;
+  border-radius:30px;
+}
+
+/* WA BUTTON */
+.wa{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <b>SUVARNA SUTERA</b>
+  <div class="call">(021) 3110 3838</div>
+</div>
+
+<div class="hero">
+  <h1>BAYLEAF</h1>
+  <p>Real 2-Storey House</p>
+</div>
+
+<div class="price">
+  <p>New Launch</p>
+  <div class="big">Rp 597 Jutaan</div>
+  <p>Cicilan mulai Rp 3 juta/bulan</p>
+</div>
+
+<div class="free">
+  FREE:
+  <br>✔ IPL 1 Tahun
+  <br>✔ Biaya KPR & BPHTB
+  <br>✔ Robot Vacuum + AC
+</div>
+
+<div class="grid">
+  <div class="box">1 menit<br>Astha Arcade</div>
+  <div class="box">10 menit<br>Sekolah</div>
+  <div class="box">10 menit<br>Pasar</div>
+  <div class="box yellow">10 menit<br>Shuttle</div>
+  <div class="box yellow">11 menit<br>Flavor Bliss</div>
+  <div class="box yellow">14 menit<br>Golf</div>
+</div>
+
+<div class="icon-grid">
+  <div class="icon">500m Exit Tol</div>
+  <div class="icon">20 menit Alam Sutera</div>
+  <div class="icon">30 menit Jakarta</div>
+  <div class="icon">40 menit Bandara</div>
+</div>
+
+<div class="house">
+  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6">
+  <div style="padding:15px">
+    <h3>BRAVA</h3>
+    <p>LT 72m² • LB 69m²</p>
+  </div>
+</div>
+
+<div class="form">
+  <h3>Dapatkan Brosur</h3>
+  <input id="nama" placeholder="Nama">
+  <input id="hp" placeholder="Nomor HP">
+  <button class="btn" onclick="kirimWA()">Kirim</button>
+</div>
+
+<a class="wa" href="https://wa.me/6287847564853" target="_blank">💬</a>
+
+<script>
+function kirimWA(){
+  var nama = document.getElementById("nama").value;
+  var hp = document.getElementById("hp").value;
+
+  var pesan = "Halo saya tertarik Bayleaf%0A"
+            + "Nama: " + nama + "%0A"
+            + "No HP: " + hp;
+
+  window.open("https://wa.me/6287847564853?text=" + pesan);
+}
+</script>
+
+</body>
+</html>
